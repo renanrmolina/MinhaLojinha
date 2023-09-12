@@ -4,7 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.ConfigureMongoDBSettings(builder.Configuration);
-
+// Add services to the container.
+builder.Services.ConfigureMongoDBSettings(builder.Configuration);
+builder.Services.ConfigureProductRepository();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
